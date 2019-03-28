@@ -2,4 +2,4 @@ dist: xenial
 language: node_js
 cache: yarn
 before_script:
-  - yarn ganache-cli &
+  - yarn ganache-cli
