@@ -17,7 +17,7 @@
   "scripts": {
     "start": "echo nothing to start here, try test",
     "test": "yarn mocha --exit",
-    "ganache:run": "yarn ganache:run"
+    "ganache:run": "yarn ganache-cli"
   },
   "keywords": [
     "web3js tests"
