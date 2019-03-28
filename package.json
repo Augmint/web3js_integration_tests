@@ -1,0 +1,27 @@
+{
+  "name": "web3js-integration-tests",
+  "version": "0.0.1",
+  "description": "Integration tests for web3js and ganache",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "ganache-cli": "6.4.1",
+    "web3": "1.0.0-beta.51"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "mocha": "6.0.2",
+    "sinon": "7.3.0"
+  },
+  "scripts": {
+    "start": "echo nothing to start here, try test",
+    "test": "yarn mocha --exit",
+    "ganache:run": "yarn ganache:run"
+  },
+  "keywords": [
+    "web3js tests"
+  ],
+  "author": "Augmint",
+  "license": "GPL-3.0"
+}
