@@ -3,4 +3,4 @@ language: node_js
 cache: yarn
 before_script:
   - yarn ganache-cli -q &
-  - sleep 1 # give it some time for ganche to start
+  - yarn truffle migrate
