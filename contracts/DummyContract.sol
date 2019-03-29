@@ -9,8 +9,12 @@ contract DummyContract {
 		emit DummyEvent1(msg.sender, to, value);
 	}
 
-	function dummyFx2(uint value) public  {
+	function dummyFx2(uint value) public {
 		emit DummyEvent2(msg.sender, value);
+	}
+
+	function revertMe() public {
+		revert();
 	}
 
 }
