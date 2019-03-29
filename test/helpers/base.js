@@ -10,6 +10,8 @@ const providers = [
     new Web3(Web3.providers.HttpProvider("http://localhost:8545"), null, OPTIONS)
 ];
 
+providers.forEach(web3 => console.log(web3.currentProvider.constructor.name, "version: ", web3.version));
+
 module.exports = {
     get TRANSACTION_CONFIRMATION_BLOCKS() {
         return TRANSACTION_CONFIRMATION_BLOCKS;

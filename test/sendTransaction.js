@@ -4,7 +4,6 @@ const sinon = require("sinon");
 const baseHelpers = require("./helpers/base.js");
 
 const providers = baseHelpers.providers;
-console.log(providers[0].version);
 
 providers.forEach(web3 => {
     describe("sendTransaction - " + web3.currentProvider.constructor.name, () => {
