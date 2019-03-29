@@ -7,7 +7,7 @@ const providers = baseHelpers.providers;
 console.log(providers[0].version);
 
 providers.forEach(web3 => {
-    describe("Basic web3 and ganache integration tests - " + web3.currentProvider.constructor.name, () => {
+    describe("sendTransaction - " + web3.currentProvider.constructor.name, () => {
         it.skip("should trigger tx events after send", async () => {
             // Failing with beta 51
             assert.equal(web3.transactionConfirmationBlocks, baseHelpers.TRANSACTION_CONFIRMATION_BLOCKS);

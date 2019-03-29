@@ -5,7 +5,7 @@ const baseHelpers = require("./helpers/base.js");
 const providers = baseHelpers.providers;
 
 providers.forEach(web3 => {
-    describe("getPastLogs - " + web3.currentProvider.constructor.name, () => {
+    describe("getPastEvents - " + web3.currentProvider.constructor.name, () => {
         it("should filter past logs", async () => {
             // Failed with beta 46, works with beta 51
             const accounts = await web3.eth.personal.getAccounts();
