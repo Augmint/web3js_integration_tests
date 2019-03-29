@@ -2,7 +2,9 @@ const Web3 = require("web3");
 
 const TRANSACTION_CONFIRMATION_BLOCKS = 3;
 const OPTIONS = {
-    transactionConfirmationBlocks: TRANSACTION_CONFIRMATION_BLOCKS
+    transactionConfirmationBlocks: TRANSACTION_CONFIRMATION_BLOCKS,
+    transactionBlockTimeout: 5,
+    transactionPollingTimeout: 480,
 };
 
 const providers = [
