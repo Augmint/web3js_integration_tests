@@ -14,7 +14,7 @@ Intention is to gradually build up tests with all breaking issues we encounter s
 
 ## Run
 
-`yarn ganache:run` then `yarn test`
+`yarn runmigrate` then `yarn test`
 
 ## Authors
 

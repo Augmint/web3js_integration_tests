@@ -6,6 +6,6 @@ before_install:
 before_script:
   - greenkeeper-lockfile-update
   - yarn ganache-cli -q &
-  - yarn truffle migrate
+  - yarn migrate
 after_script:
   - greenkeeper-lockfile-upload

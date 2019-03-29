@@ -18,6 +18,8 @@
   "scripts": {
     "start": "echo nothing to start here, try test",
     "test": "yarn mocha --exit",
+    "migrate": "yarn truffle migrate",
+    "runmigrate": "yarn ganache:run & yarn migrate && echo 'Migration done. Contracts deployed to ganache. Contract artifacts are in build/contracts folder.' & wait",
     "ganache:run": "yarn ganache-cli"
   },
   "keywords": [
