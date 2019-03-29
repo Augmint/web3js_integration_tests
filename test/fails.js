@@ -11,7 +11,8 @@ providers.forEach(web3 => {
             const transactionHashSpy = sinon.spy();
             const confirmationSpy = sinon.spy();
             const receiptSpy = sinon.spy();
-            const errorSpy = sinon.spy();
+            const onErrorSpy = sinon.spy();
+            const catchErrorSpy = sinon.spy();
 
             const accounts = await web3.eth.personal.getAccounts();
             const dummyContract = await baseHelpers.getWeb3ContractInstance(
@@ -25,16 +26,17 @@ providers.forEach(web3 => {
                 .on("transactionHash", transactionHashSpy)
                 .on("confirmation", confirmationSpy)
                 .on("receipt", receiptSpy)
-                .on("error", errorSpy);
+                .on("error", onErrorSpy);
 
-            await receipt;
+            await receipt.catch(catchErrorSpy);
+
+            assert(!receipt.status);
+            sinon.assert.calledOnce(onErrorSpy);
+            sinon.assert.calledOnce(catchErrorSpy);
 
             sinon.assert.calledOnce(transactionHashSpy);
             sinon.assert.calledOnce(receiptSpy);
             sinon.assert.callCount(confirmationSpy, baseHelpers.TRANSACTION_CONFIRMATION_BLOCKS);
-            sinon.assert.calledOnce(errorSpy);
-
-            assert(!receipt.status);
         });
     });
 });
