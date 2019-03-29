@@ -29,8 +29,11 @@ providers.forEach(web3 => {
 
                 const txToSign = {
                     from: accounts[0],
-                    to: dummyContract._address,
+                    to: dummyContract.options.address,
                     data: encodedABI
+                    // signTransaction failing without these on beta51:
+                    // chainId: await web3.eth.net.getId(),
+                    // gas: 60000
                 };
 
                 const signedTx = await web3.eth.accounts.signTransaction(txToSign, ACCOUNT_0_PRIVATE_KEY);
