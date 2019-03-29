@@ -7,7 +7,7 @@ const providers = baseHelpers.providers;
 
 providers.forEach(web3 => {
     describe("tx fails - " + web3.currentProvider.constructor.name, () => {
-        it.only("should resolve when VM revert error", async () => {
+        it("should resolve when VM revert error", async () => {
             // fails on beta36 and beta51 - confirmations or receipt events never triggered
             //      receipt is not available neither in resolved tx or in error event args
             return new Promise(async resolve => {
