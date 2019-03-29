@@ -16,19 +16,17 @@ providers.forEach(web3 => {
             const confirmationSpy = sinon.spy();
             const receiptSpy = sinon.spy();
 
-            const receipt = web3.eth
+            const receipt = await web3.eth
                 .sendTransaction({ to: accounts[1], from: accounts[0], value: web3.utils.toWei("0.1", "ether") })
                 .on("transactionHash", transactionHashSpy)
                 .on("confirmation", confirmationSpy)
                 .on("receipt", receiptSpy);
 
-            await receipt;
+            assert(receipt.status);
 
             sinon.assert.calledOnce(transactionHashSpy);
             sinon.assert.calledOnce(receiptSpy);
             sinon.assert.callCount(confirmationSpy, baseHelpers.TRANSACTION_CONFIRMATION_BLOCKS);
-
-            assert(receipt.status);
         });
     });
 });
