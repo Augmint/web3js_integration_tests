@@ -14,14 +14,14 @@ providers.forEach(web3 => {
                 "../../build/contracts/DummyContract.json"
             );
 
-            const events = await dummyContract.getPastEvents("DummyEvent", {
+            const events = await dummyContract.getPastEvents("DummyEvent1", {
                 fromBlock: 0,
                 filter: { from: accounts[0], to: accounts[2] }
             });
 
             assert(events.length, 2);
             events.forEach(e => {
-                assert.equal(e.event, "DummyEvent");
+                assert.equal(e.event, "DummyEvent1");
                 assert.equal(e.returnValues.from, accounts[0]);
                 assert.equal(e.returnValues.to, accounts[2]);
             });
