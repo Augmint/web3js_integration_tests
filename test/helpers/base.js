@@ -6,8 +6,8 @@ const OPTIONS = {
 };
 
 const providers = [
-    new Web3(Web3.providers.WebsocketProvider("ws://localhost:8545"), null, OPTIONS),
-    new Web3(Web3.providers.HttpProvider("http://localhost:8545"), null, OPTIONS)
+    new Web3(new Web3.providers.WebsocketProvider("ws://localhost:8545"), null, OPTIONS),
+    new Web3(new Web3.providers.HttpProvider("http://localhost:8545"), null, OPTIONS)
 ];
 
 providers.forEach(web3 => console.log(web3.currentProvider.constructor.name, "version: ", web3.version));
@@ -28,5 +28,5 @@ async function getWeb3ContractInstance(_web3, truffleArtifactPath) {
     const networkId = await _web3.eth.net.getId();
     const address = contractArtifact.networks[networkId].address;
 
-    return _web3.eth.Contract(abi, address);
+    return new _web3.eth.Contract(abi, address);
 }
