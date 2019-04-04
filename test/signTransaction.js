@@ -4,7 +4,7 @@ const sinon = require("sinon");
 const baseHelpers = require("./helpers/base.js");
 
 const providers = baseHelpers.providers;
-const ACCOUNT_0_PRIVATE_KEY = "0x650dec85be94330d93c512b9b8a241e404929c1c73b88881bad4b6722efd6731";
+const ACCOUNT_0_PRIVATE_KEY = "0x586ad5c6b783aba623827a1075423d281078dea57ba1c12f6c9f0fe185a88b31";
 
 providers.forEach(web3 => {
     describe("signTransaction - " + web3.currentProvider.constructor.name, () => {
