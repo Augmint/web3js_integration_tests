@@ -24,7 +24,7 @@
     "@sinonjs/commons" "^1"
     "@sinonjs/samsam" "^3.1.0"
 
-"@sinonjs/samsam@^3.1.0", "@sinonjs/samsam@^3.3.0":
+"@sinonjs/samsam@^3.1.0", "@sinonjs/samsam@^3.3.1":
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-3.3.1.tgz#e88c53fbd9d91ad9f0f2b0140c16c7c107fe0d07"
   integrity sha512-wRSfmyd81swH0hA1bxJZJ57xr22kC07a1N4zuIL47yTS04bDk6AoCkczcqHEjcRPmJ+FruGJ9WBQiJwMtIElFw==
@@ -3171,14 +3171,14 @@ simple-get@^2.7.0:
     once "^1.3.1"
     simple-concat "^1.0.0"
 
-sinon@7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.3.0.tgz#fd409432bf2ef8ee6a302cf47ca1b0c95fd4de38"
-  integrity sha512-0pYvgRv46fODzT/PByqb79MVNpyxsxf38WEiXTABOF8RfIMcIARfZ+1ORuxwAmHkreZ/jST3UDBdKCRhUy/e1A==
+sinon@7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-7.3.1.tgz#e8276522104e6c08d1cb52a907270b0e316655c4"
+  integrity sha512-eQKMaeWovtOtYe2xThEvaHmmxf870Di+bim10c3ZPrL5bZhLGtu8cz+rOBTFz0CwBV4Q/7dYwZiqZbGVLZ+vjQ==
   dependencies:
     "@sinonjs/commons" "^1.4.0"
     "@sinonjs/formatio" "^3.2.1"
-    "@sinonjs/samsam" "^3.3.0"
+    "@sinonjs/samsam" "^3.3.1"
     diff "^3.5.0"
     lolex "^3.1.0"
     nise "^1.4.10"
@@ -3494,10 +3494,10 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-truffle@5.0.10:
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.0.10.tgz#f773522becbed0f66b372c6a9a1f36d233337e1e"
-  integrity sha512-wVp7ruznIm1iX7fTHZwjKZCaOkkQcTR1eWOCi2yTQ85wg1iQITpV7NLDpVandaNcz5Z0e8EdOrH9lFKLgxiAxQ==
+truffle@5.0.11:
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.0.11.tgz#e593674415bf5e4a02eed5b940d736dece5ab447"
+  integrity sha512-LyXKxrvPuWuM31AF0U+d890e3ojYAjt4CeHO1zrjBG+/2ac/Fv31yqZS/cXN8xU09xCVC9uEcJ2Z23j9Q2KhRg==
   dependencies:
     app-module-path "^2.2.0"
     mocha "^4.1.0"
