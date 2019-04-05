@@ -58,7 +58,7 @@ providers.forEach(web3 => {
                     receiptSpy(receipt);
                 })
                 .on("confirmation", (confirmationNumber, receipt) => {
-                    console.log("confirmation no:", confirmationNumber);
+                    console.log("confirmation no:", confirmationNumber, web3.currentProvider.constructor.name);
                     confirmationSpy(confirmationNumber, receipt);
                 })
                 .on("error", error => console.log);
