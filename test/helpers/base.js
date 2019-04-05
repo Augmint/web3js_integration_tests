@@ -1,15 +1,23 @@
 const Web3 = require("web3");
 
 const TRANSACTION_CONFIRMATION_BLOCKS = 3;
-const OPTIONS = {
+
+const WEBSOCKET_OPTIONS = {
+    defaultBlock: "latest",
+
     transactionConfirmationBlocks: TRANSACTION_CONFIRMATION_BLOCKS,
-    transactionBlockTimeout: 5,
-    transactionPollingTimeout: 480,
+    transactionBlockTimeout: 5
+};
+
+const HTTP_OPTIONS = {
+    defaultBlock: "latest",
+
+    transactionPollingTimeout: 480
 };
 
 const providers = [
-    new Web3(new Web3.providers.WebsocketProvider("ws://localhost:8545"), null, OPTIONS),
-    new Web3(new Web3.providers.HttpProvider("http://localhost:8545"), null, OPTIONS)
+    new Web3(new Web3.providers.WebsocketProvider("ws://localhost:8545"), null, WEBSOCKET_OPTIONS),
+    new Web3(new Web3.providers.HttpProvider("http://localhost:8545"), null, HTTP_OPTIONS)
 ];
 
 providers.forEach(web3 => console.log(web3.currentProvider.constructor.name, "version: ", web3.version));
