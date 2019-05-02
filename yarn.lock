@@ -3494,10 +3494,10 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-truffle@5.0.11:
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.0.11.tgz#e593674415bf5e4a02eed5b940d736dece5ab447"
-  integrity sha512-LyXKxrvPuWuM31AF0U+d890e3ojYAjt4CeHO1zrjBG+/2ac/Fv31yqZS/cXN8xU09xCVC9uEcJ2Z23j9Q2KhRg==
+truffle@5.0.15:
+  version "5.0.15"
+  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.0.15.tgz#b0b87829766cce6be072a6f09794cf038930070b"
+  integrity sha512-/FAabG/+xv4mADQvm4YXTMWThXrc9Z4MsMCqWixrd6DlQMPBQIV5F86DeYHgkKbp8hRM3oGUdBVfpWRaha6YKg==
   dependencies:
     app-module-path "^2.2.0"
     mocha "^4.1.0"
